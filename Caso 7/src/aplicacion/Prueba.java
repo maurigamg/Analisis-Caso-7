@@ -1,5 +1,7 @@
 package aplicacion;
 
+import logica.Probabilidad;
+
 /**
  * 
  * @author Mauricio Gamboa
@@ -8,5 +10,10 @@ package aplicacion;
  */
 public class Prueba {
   public static void main(String[] args) {
+	Probabilidad probabilidad;
+	probabilidad = new Probabilidad("xZwM7BWIpSjYyGFr9rhpEa+cYVtACW7yQKmy"
+	    + "N6OYSCv0ZEg9jWbc6lKzzCxRSSIvOvlimQZBMZOYnOwiA9yy3YU8zk4abFSItoW6Wj0ufQ0=");
+	probabilidad.randomizeNumeros();
+	probabilidad.randomizeLetras();
   }
 }
