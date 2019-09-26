@@ -1,4 +1,5 @@
 package logica;
+import java.util.*; 
 
 /**
  *
@@ -15,6 +16,9 @@ public class Probabilidad {
   private final String keyPart3 = "3";
   private String encriptado;
   private int intentos = 0;
+  private Conjunto[] todosLosConjuntos = new Conjunto [12];
+  
+  
 
   /**
    * Constructor de la clase Probabilidad
@@ -24,43 +28,41 @@ public class Probabilidad {
   public Probabilidad(String encriptado) {
 	this.encriptado = encriptado;
   }
-
-  /**
-   * Metodo para tener un orden random de letras
-   */
-  private void randomizeLetras() {
-	int maximo = letras.length;
-	int cambio;
-	for (int actual = 0; actual < maximo; actual++) {
-	  cambio = (int) (Math.random() * 26);
-	  char temporal = letras[cambio];
-	  letras[cambio] = letras[actual];
-	  letras[actual] = temporal;
-	}
-  }
-
-  /**
-   * Metodo para tener un orden random de numeros
-   */
-  private void randomizeNumeros() {
-	int maximo = numeros.length;
-	int cambio;
-	for (int actual = 0; actual < maximo; actual++) {
-	  cambio = (int) (Math.random() * 10);
-	  char temporal = numeros[cambio];
-	  numeros[cambio] = numeros[actual];
-	  numeros[actual] = temporal;
-	}
-  }
-
   /**
    * Metodo que realiza las pruebas hasta obtener una combinacion correcta para descifrar
    * 
    * @return Un String con los intentos que realizo, el mensaje descifrado y la llave utilizada
    */
   public String realizarPrueba() {
-	this.randomizeLetras();
-	this.randomizeNumeros();
+	
 	return null;
   }
+  /**
+   * Metodo que crea los 12 conjuntos
+   * 
+   * @return Un String con los intentos que realizo, el mensaje descifrado y la llave utilizada
+   */
+  
+  public void crearConjuntos() {
+	  for(int conjuntoNuevo = 0; conjuntoNuevo < 12; conjuntoNuevo ++) {
+		  
+		  Set <Character> tempCharacters = new HashSet<Character>();
+		  Set <Character> tempNumeros = new HashSet<Character>();
+		  
+		  while(tempCharacters.size() < 7) {
+			  tempCharacters.add(letras[(int) (Math.random()*26)]);
+		  }
+		  while(tempNumeros.size() < 3) {
+			  tempNumeros.add(numeros[(int) (Math.random()*10)]);
+		  }
+		  
+		  todosLosConjuntos[conjuntoNuevo] = new Conjunto(tempCharacters,tempNumeros);
+		  
+		  System.out.println("Conjunto Nuevo ------");
+		  System.out.println(tempCharacters.toString());
+		  System.out.println(tempNumeros.toString());
+ 	  }
+  }
+  
+  
 }
