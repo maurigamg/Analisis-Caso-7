@@ -1,5 +1,15 @@
 package logica;
-import java.util.*; 
+
+import java.util.HashSet;
+import java.util.Set;
+
+/**
+ * 
+ * @author Jose Macias
+ * @author Mauricio Gamboa
+ * @version 26/09/2019
+ *
+ */
 public class Conjunto {
 	
   private Set <Character> conjuntoLetras = new HashSet<Character>();
