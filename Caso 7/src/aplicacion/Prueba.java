@@ -15,6 +15,7 @@ public class Prueba {
 	    + "N6OYSCv0ZEg9jWbc6lKzzCxRSSIvOvlimQZBMZOYnOwiA9yy3YU8zk4abFSItoW6Wj0ufQ0=");
 
 	System.out.println(probabilidad.realizarPrueba());
-	System.out.println("prueba");
+	
+	
   }
 }

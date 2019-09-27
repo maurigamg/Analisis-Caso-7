@@ -24,43 +24,13 @@ public class Probabilidad {
   public Probabilidad(String encriptado) {
 	this.encriptado = encriptado;
   }
-
-  /**
-   * Metodo para tener un orden random de letras
-   */
-  private void randomizeLetras() {
-	int maximo = letras.length;
-	int cambio;
-	for (int actual = 0; actual < maximo; actual++) {
-	  cambio = (int) (Math.random() * 26);
-	  char temporal = letras[cambio];
-	  letras[cambio] = letras[actual];
-	  letras[actual] = temporal;
-	}
-  }
-
-  /**
-   * Metodo para tener un orden random de numeros
-   */
-  private void randomizeNumeros() {
-	int maximo = numeros.length;
-	int cambio;
-	for (int actual = 0; actual < maximo; actual++) {
-	  cambio = (int) (Math.random() * 10);
-	  char temporal = numeros[cambio];
-	  numeros[cambio] = numeros[actual];
-	  numeros[actual] = temporal;
-	}
-  }
-
   /**
    * Metodo que realiza las pruebas hasta obtener una combinacion correcta para descifrar
    * 
    * @return Un String con los intentos que realizo, el mensaje descifrado y la llave utilizada
    */
   public String realizarPrueba() {
-	this.randomizeLetras();
-	this.randomizeNumeros();
+	
 	return null;
   }
 }
