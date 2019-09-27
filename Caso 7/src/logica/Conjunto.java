@@ -12,8 +12,8 @@ import java.util.Set;
  */
 public class Conjunto {
 	
-  private Set <Character> conjuntoLetras = new HashSet<Character>();
-  private Set <Character> conjuntoNumeros = new HashSet<Character>();
+  private Set <Character> conjuntoLetras = new HashSet<Character>(); //letras del conjunto
+  private Set <Character> conjuntoNumeros = new HashSet<Character>(); //numeros del conjunto
   
   public Conjunto(Set<Character> conjuntoLetras, Set<Character> conjuntoNumeros) {
 	super();
@@ -21,6 +21,7 @@ public class Conjunto {
 	this.conjuntoNumeros = conjuntoNumeros;
   }
   
+  //getters y setters
   public Set<Character> getConjuntoLetras() {
 	return conjuntoLetras;
   }

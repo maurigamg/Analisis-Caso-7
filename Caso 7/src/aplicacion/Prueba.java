@@ -1,7 +1,5 @@
 package aplicacion;
 
-import java.util.Scanner;
-
 import logica.Probabilidad;
 
 /**
@@ -17,24 +15,9 @@ public class Prueba {
 	probabilidad = new Probabilidad("xZwM7BWIpSjYyGFr9rhpEa+cYVtACW7yQKmy"
 	    + "N6OYSCv0ZEg9jWbc6lKzzCxRSSIvOvlimQZBMZOYnOwiA9yy3YU8zk4abFSItoW6Wj0ufQ0=");
 	
-	probabilidad.crearConjuntos();
-	probabilidad.realizarPrueba();
-	
-	Scanner scanner = new Scanner(System.in);
-    String readString = scanner.nextLine();
-    while(readString!=null) {
-        System.out.println(readString);
-        probabilidad.realizarPrueba();
-        if (readString.isEmpty()) {
-            System.out.println("Gracias por usar el programa");
-            break;
-        }
-
-        if (scanner.hasNextLine()) {
-            readString = scanner.nextLine();
-        } else {
-            readString = null;
-        }
-    }
+	for(int numPrueba=1;numPrueba<=10;numPrueba++) {
+	  probabilidad.realizarPrueba();
+	  System.out.println("Prueba "+numPrueba+"\n"+probabilidad.verResultados());
+	}
   }
 }
