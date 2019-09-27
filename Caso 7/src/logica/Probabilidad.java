@@ -1,4 +1,5 @@
 package logica;
+import java.util.*; 
 
 /**
  *
@@ -15,6 +16,9 @@ public class Probabilidad {
   private final String keyPart3 = "3";
   private String encriptado;
   private int intentos = 0;
+  private Conjunto[] todosLosConjuntos = new Conjunto [12];
+  
+  
 
   /**
    * Constructor de la clase Probabilidad
@@ -33,4 +37,32 @@ public class Probabilidad {
 	
 	return null;
   }
+  /**
+   * Metodo que crea los 12 conjuntos
+   * 
+   * @return Un String con los intentos que realizo, el mensaje descifrado y la llave utilizada
+   */
+  
+  public void crearConjuntos() {
+	  for(int conjuntoNuevo = 0; conjuntoNuevo < 12; conjuntoNuevo ++) {
+		  
+		  Set <Character> tempCharacters = new HashSet<Character>();
+		  Set <Character> tempNumeros = new HashSet<Character>();
+		  
+		  while(tempCharacters.size() < 7) {
+			  tempCharacters.add(letras[(int) (Math.random()*26)]);
+		  }
+		  while(tempNumeros.size() < 3) {
+			  tempNumeros.add(numeros[(int) (Math.random()*10)]);
+		  }
+		  
+		  todosLosConjuntos[conjuntoNuevo] = new Conjunto(tempCharacters,tempNumeros);
+		  
+		  System.out.println("Conjunto Nuevo ------");
+		  System.out.println(tempCharacters.toString());
+		  System.out.println(tempNumeros.toString());
+ 	  }
+  }
+  
+  
 }
