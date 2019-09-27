@@ -76,7 +76,7 @@ public class Probabilidad {
   }
 
   /**
-   * Metodo que realiza las pruebas sobre los hasta obtener una resultado correcto
+   * Metodo que realiza las pruebas sobre los conjuntos hasta obtener una resultado correcto
    * 
    */
   public void realizarPrueba() {
@@ -103,7 +103,7 @@ public class Probabilidad {
   }
   
   /**
-   * Metodo que agrega m·s posibilidades a ciertas letras o conjuntos
+   * Metodo que agrega m√°s posibilidades a ciertas letras o conjuntos
    * 
    * @param setUtil representa el subconjunto de letras o numeros de un conjunto que dio solucion
    * @param arrASumar ArrayList al cual se le van a agregar los elementos de setUtil
