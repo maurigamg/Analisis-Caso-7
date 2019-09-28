@@ -17,7 +17,7 @@ public class Prueba {
 	
 	for(int numPrueba=1;numPrueba<=10;numPrueba++) {
 	  probabilidad.realizarPrueba();
-	  System.out.println("Prueba "+numPrueba+"\n"+probabilidad.verResultados());
 	}
+	System.out.println(probabilidad.verResultados());
   }
 }
